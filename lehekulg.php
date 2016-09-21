@@ -6,14 +6,14 @@
 
 	$signupEmailError = "";
 	
-	//kas on üldse olemas
+	//kas on Ã¼ldse olemas
 	if (isset ($_POST ["signupEmail"])) {
 		
 		//oli olemas, ehk keegi vajutas nuppu
-		//kas oli tühi
+		//kas oli tÃ¼hi
 		if (empty ($_POST ["signupEmail"])) {
 			
-			//oli tõesti tühi
+			//oli tÃµesti tÃ¼hi
 			$signupEmailError = "See v2li on kohustuslik!"; 
 		
 		}
@@ -22,20 +22,20 @@
 	
 	$signupPasswordError = "";
 	
-	//kas on üldse olemas
+	//kas on Ã¼ldse olemas
 	if (isset ($_POST ["signupPassword"])) {
 		
 		//oli olemas, ehk keegi vajutas nuppu
-		//kas oli tühi
+		//kas oli tÃ¼hi
 		if (empty ($_POST ["signupPassword"])) {
 			
-			//oli tõesti tühi
+			//oli tÃµesti tÃ¼hi
 			$signupPasswordError = "Parool puudulik!"; 
 			
 		} else {
-			//oli midagi, ei olnud tühi
+			//oli midagi, ei olnud tÃ¼hi
 			
-			//kas pikkus vähemalt 8
+			//kas pikkus vÃ¤hemalt 8
 			if (strlen ($_POST ["signupPassword"]) <8 ) {
 				
 				$signupPasswordError = "Parool peab olema v2hemalt 8 t2hem2rki!";
@@ -88,6 +88,9 @@
 			<input name="signupPassword" type="password"> <?php echo $signupPasswordError;?>
 			
 			<br><br>
+			<label>Sisesta oma sugu</label><br>
+			<input type="radio" name="gender" value="male" checked> Mees<br>
+			<input type="radio" name="gender" value="female"> Naine<br>
 			
 			<input type= "submit" value="Loo kasuta->">
 			
